@@ -1,6 +1,8 @@
 baseURL: "https://go-sqlt.github.io/"
 title: "{{ sqlt }}"
 
+enableGitInfo: true
+
 menu:
   main:
     - name: Tour
@@ -65,6 +67,8 @@ params:
     breadcrumb_disable: false
     navbar_logo: false
     navbar_translucent_over_cover_disable: false
+    sidebar_cache_limit: 10
+    sidebar_menu_foldable: true
     sidebar_menu_compact: false
     sidebar_search_disable: false
     feedback:
