@@ -70,10 +70,10 @@ params:
     feedback:
       enable: true
       "yes": >-
-        Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">
+        Glad to hear it! Please <a href="https://github.com/go-sqlt/go-sqlt.github.io/issues/new">
         tell us how we can improve</a>.
       "no": >-
-        Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">
+        Sorry to hear that. Please <a href="https://github.com/go-sqlt/go-sqlt.github.io/issues/new">
         tell us how we can improve</a>.
 
   links:
