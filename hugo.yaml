@@ -38,11 +38,27 @@ markup:
     noClasses: false
     tabWidth: 4
 
+outputs:
+  section:
+    - HTML
+    - RSS
+    - print
+
+services:
+  googleAnalytics:
+    id: G-58SKN6L44R
+
 params:
+  print:
+    disable_toc: true
   icons:
     - "fab fa-golang"
+  github_repo: https://github.com/go-sqlt/go-sqlt.github.io
   github_project_repo: https://github.com/go-sqlt/sqlt
   github_branch: main
+
+  offlineSearch: true
+  offlineSearchMaxResults: 10
 
   ui:
     showLightDarkModeMenu: true
@@ -51,6 +67,14 @@ params:
     navbar_translucent_over_cover_disable: false
     sidebar_menu_compact: false
     sidebar_search_disable: false
+    feedback:
+      enable: true
+      "yes": >-
+        Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">
+        tell us how we can improve</a>.
+      "no": >-
+        Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">
+        tell us how we can improve</a>.
 
   links:
     developer:

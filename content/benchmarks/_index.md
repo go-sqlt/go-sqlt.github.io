@@ -5,8 +5,6 @@ description: >
   Results of the [Bench-Flix](https://github.com/go-sqlt/bench-flix) benchmarks.
 cascade:
 - type: docs
-params:
-  toc: false
 ---
 
 ## NsPerOp

@@ -1,5 +1,6 @@
 ---
 title: sqlt
+exclude_search: true
 ---
 
 {{< blocks/cover title="{{ sqlt }}" image_anchor="top" height="full" >}}
@@ -12,28 +13,6 @@ title: sqlt
 <li class="lead mt-0 mb-4">Type-Safe</li>
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
-
-
-<!-- {{% blocks/lead color="primary" %}}
-Documentation
-{{% /blocks/lead %}}
-
-
-{{% blocks/section color="dark" type="row" %}}
-
-{{% blocks/feature icon="fa-lightbulb" title="Config" url="documentation/config" %}}
-
-{{% /blocks/feature %}}
-
-{{% blocks/feature icon="fa-lightbulb" title="Driver" url="documentation/driver" %}}
-
-{{% /blocks/feature %}}
-
-{{% blocks/feature icon="fa-lightbulb" title="Scanner" url="documentation/scanner" %}}
-
-{{% /blocks/feature %}}
-
-{{% /blocks/section %}} -->
 
 
 {{% blocks/lead %}}
