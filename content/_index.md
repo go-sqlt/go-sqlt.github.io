@@ -8,9 +8,9 @@ exclude_search: true
 <a class="btn btn-lg btn-primary me-3 mb-4" href="tour/">
   Start Tour <i class="fas fa-camera ms-2"></i>
 </a>
-<li class="lead mt-0">SQL-First</li>
-<li class="lead mt-0">No Build-Step</li>
-<li class="lead mt-0 mb-4">Type-Safe</li>
+<p class="lead mt-0">SQL-First</p>
+<p class="lead mt-0">No Build-Step</p>
+<p class="lead mt-0 mb-4">Type-Safe</p>
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
 
