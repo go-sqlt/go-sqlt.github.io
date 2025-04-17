@@ -1,3 +1,1 @@
-# go-sqlt.github.io
-
-- The Website
+# sqlt Website

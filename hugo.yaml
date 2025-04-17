@@ -1,0 +1,72 @@
+baseURL: "https://go-sqlt.github.io/"
+title: "{{ sqlt }}"
+
+menu:
+  main:
+    - name: Tour
+      pageRef: tour
+      weight: 1
+    - name: Benchmarks
+      pageRef: benchmarks
+      weight: 3
+    - name: API
+      weight: 4
+      url: https://pkg.go.dev/github.com/go-sqlt/sqlt
+    - name: GitHub
+      weight: 5
+      url: https://github.com/go-sqlt/sqlt/
+
+taxonomies:
+  driver: drivers
+  scanner: scanners
+  executor: executors
+  config: configs
+
+imaging:
+  resampleFilter: CatmullRom
+  quality: 75
+  anchor: Smart
+
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    tabWidth: 4
+
+params:
+  icons:
+    - "fab fa-golang"
+  github_project_repo: https://github.com/go-sqlt/sqlt
+  github_branch: main
+
+  ui:
+    showLightDarkModeMenu: true
+    breadcrumb_disable: false
+    navbar_logo: false
+    navbar_translucent_over_cover_disable: false
+    sidebar_menu_compact: false
+    sidebar_search_disable: false
+
+  links:
+    developer:
+      - name: github
+        url: https://github.com/go-sqlt/sqlt
+        icon: fab fa-github
+        desc: github
+      - name: go-doc
+        url: https://pkg.go.dev/github.com/go-sqlt/sqlt
+        icon: fab fa-golang
+        desc: go-doc
+
+module:
+  hugoVersion:
+    extended: true
+    min: 0.110.0
+  imports:
+    - path: github.com/google/docsy
+      disable: false

@@ -1,0 +1,135 @@
+/*
+
+Add styles or override variables from the theme here.
+
+/*
+
+/* === Dark Mode === */
+[data-bs-theme="dark"] {
+        .chroma {
+                color: #fafafa;
+                background-color: #282a36;
+        }
+
+        .chroma .cm,
+        .chroma .c1 {
+            color: #a1915e;
+        }
+
+        .chroma .cp + .w + .nx,
+        .chroma .gr,
+        .chroma .k,
+        .chroma .kc,
+        .chroma .kd,
+        .chroma .kn,
+        .chroma .kp,
+        .chroma .kr,
+        .chroma .o,
+        .chroma .ow {
+                color: #ff90cf;
+        }
+
+        .chroma .s,
+        .chroma .x,
+        .chroma .nc,
+        .chroma .nn,
+        .chroma .sa,
+        .chroma .sb,
+        .chroma .sc,
+        .chroma .sd,
+        .chroma .s1,
+        .chroma .s2,
+        .chroma .se,
+        .chroma .sh,
+        .chroma .si,
+        .chroma .sr,
+        .chroma .ss {
+                color: #9ff8ab;
+        }
+
+        .chroma .nx + .na,
+        .chroma .s + .w + .nx,
+        .chroma .cp + .w + .na,
+        .chroma .k + .w + .s,
+        .chroma .nx + .w + .s {
+                color: #9ff1ff;
+        }
+}
+
+/* === Light Mode === */
+[data-bs-theme="light"] {
+    .chroma {
+            color: #282a36;
+            background-color: #fafafa;
+    }
+
+    .chroma .cm,
+    .chroma .c1 {
+        color: #957b2c;
+    }
+
+    .chroma .cp + .w + .nx,
+    .chroma .gr,
+    .chroma .k,
+    .chroma .kc,
+    .chroma .kd,
+    .chroma .kn,
+    .chroma .kp,
+    .chroma .kr,
+    .chroma .o,
+    .chroma .ow {
+            color: #a23975;
+    }
+
+    .chroma .s,
+    .chroma .x,
+    .chroma .nc,
+    .chroma .nn,
+    .chroma .sa,
+    .chroma .sb,
+    .chroma .sc,
+    .chroma .sd,
+    .chroma .s1,
+    .chroma .s2,
+    .chroma .se,
+    .chroma .sh,
+    .chroma .si,
+    .chroma .sr,
+    .chroma .ss {
+            color: #31a140;
+    }
+
+    .chroma .nx + .na,
+    .chroma .s + .w + .nx,
+    .chroma .cp + .w + .na,
+    .chroma .k + .w + .s,
+    .chroma .nx + .w + .s {
+            color: #258292;
+    }
+}
+
+.chroma {
+        tab-size: 4;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+}
+
+.highlight-wrapper {
+        margin-bottom: 1rem;
+        border: 1px solid var(--bs-border-color);
+        border-radius: 0.25rem;
+        overflow: hidden;
+}
+
+.highlight-title {
+        background-color: var(--bs-secondary-bg);
+        padding: 0.4rem 0.75rem;
+        font-size: 0.875rem;
+        border-bottom: 1px solid var(--bs-border-color);
+}
+
+
+.highlight {
+        margin: 0 !important;
+        padding-top: 0 !important;
+}

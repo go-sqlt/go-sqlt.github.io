@@ -1,0 +1,19 @@
+{{ $language := .Get "language" }}
+{{ $source := .Get "source" }}
+{{ $title := .Get "title" }}
+{{ $options := .Get "options" }}
+
+<div class="highlight-wrapper">
+    <div class="highlight-title">
+        {{ if $title }}
+        {{ $title }}
+        {{ else }}
+        <a href="https://docs/blob/main/{{ $source }}" target="_blank" rel="noopener noreferrer">{{ $source }}</a>
+        {{ end }}
+    </div>
+    {{ if $source }}
+    {{ highlight (trim ($source | readFile) "\n\r") $language $options }}
+    {{ else }}
+    {{ highlight (trim .Inner "\n\r") $language $options }}
+    {{ end }}
+</div>

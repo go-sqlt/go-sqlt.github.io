@@ -1,0 +1,15 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "editor.formatOnSave": true,
+    "editor.detectIndentation": false,
+    "go.formatTool": "goimports",
+    "go.lintTool": "golangci-lint",
+    "yaml.format.enable": true,
+    "yaml.format.singleQuote": false,
+    "yaml.completion": true,
+    "yaml.validate": true,
+    "yaml.format.printWidth": 160,
+    "editor.tabSize": 4
+}
