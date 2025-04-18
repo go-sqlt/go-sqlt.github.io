@@ -140,7 +140,7 @@ func (r Repository) Create(ctx context.Context, params Params) (id int64, err er
 	})
 }
 
-func (r Repository) CreateMany(ctx context.Context, params []Params) ([]int64, error) {
+func (r Repository) CreateMany(ctx context.Context, params []Params) (ids []int64, err error) {
 	tx, err := r.DB.BeginTx(ctx, nil)
 	if err != nil {
 		return nil, err
