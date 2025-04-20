@@ -4,7 +4,7 @@ description: >
   Learn how to load SQL from a file and execute type-safe statements using sqlt.
 weight: 2
 drivers: [modernc.org/sqlite]
-scanners: [Scan]
+scanners: [ScanInt, ScanString]
 executors: [Exec, First]
 configs: [ParseFiles, Lookup]
 ---

@@ -4,9 +4,9 @@ description: >
   This simple example demonstrates how to execute SQL statements and map the results to Go structs using sqlt.
 weight: 1
 drivers: [modernc.org/sqlite]
-scanners: [Scan]
+scanners: [ScanInt, ScanString]
 executors: [First, One]
-configs: [Parse, Question]
+configs: [Parse, Sqlite]
 ---
 
 {{< code language="go" source="tour/create_statements/repository.go" >}}{{< /code >}}

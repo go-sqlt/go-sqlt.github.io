@@ -44,11 +44,11 @@
 
 {{ define "query_books" }}
     SELECT
-        books.id                        {{ Scan "ID" }}
-        , books.title                   {{ Scan "Title" }}
+        books.id                        {{ ScanInt "ID" }}
+        , books.title                   {{ ScanString "Title" }}
         {{/* ScanStringSlice scans the column as a string and splits it into a slice of strings */}}
         , GROUP_CONCAT(authors.name)    {{ ScanStringSlice "Authors" "," }}
-        , books.added_at                {{ Scan "AddedAt" }}
+        , books.added_at                {{ ScanTime "AddedAt" }}
     FROM books
     LEFT JOIN book_authors ON books.id = book_authors.book_id
     LEFT JOIN authors ON authors.id = book_authors.author_id

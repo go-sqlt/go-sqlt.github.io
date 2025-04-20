@@ -1,16 +1,16 @@
 {{ define "schema" }}
     CREATE TABLE IF NOT EXISTS books (
-        {{ if eq Dialect "postgres" }} 
+        {{ if eq Dialect "Postgres" }} 
             id SERIAL PRIMARY KEY
-        {{ else if eq Dialect "sqlite" }} 
+        {{ else if eq Dialect "Sqlite" }} 
             id INTEGER PRIMARY KEY
         {{ else }}
             {{ fail "invalid dialect" }}
         {{ end }}
         , title TEXT NOT NULL
-        {{ if eq Dialect "postgres" }} 
+        {{ if eq Dialect "Postgres" }} 
             , added_at TIMESTAMPTZ NOT NULL
-        {{ else if eq Dialect "sqlite" }} 
+        {{ else if eq Dialect "Sqlite" }} 
             , added_at DATE NOT NULL
         {{ else }}
             {{ fail "invalid dialect" }}
@@ -18,9 +18,9 @@
     );
 
     CREATE TABLE IF NOT EXISTS authors (
-        {{ if eq Dialect "postgres" }} 
+        {{ if eq Dialect "Postgres" }} 
             id SERIAL PRIMARY KEY,
-        {{ else if eq Dialect "sqlite" }} 
+        {{ else if eq Dialect "Sqlite" }} 
             id INTEGER PRIMARY KEY,
         {{ else }}
             {{ fail "invalid dialect" }}
@@ -61,17 +61,17 @@
 
 {{ define "query_books" }}
     SELECT
-        books.id                            {{ Scan "ID" }}
-        , books.title                       {{ Scan "Title" }}
+        books.id                            {{ ScanInt "ID" }}
+        , books.title                       {{ ScanString "Title" }}
         {{/* ScanStringSlice scans the column as a string and splits it into a slice of strings */}}
-        {{ if eq Dialect "postgres" }} 
+        {{ if eq Dialect "Postgres" }} 
             , STRING_AGG(authors.name, ',') {{ ScanStringSlice "Authors" "," }}
-        {{ else if eq Dialect "sqlite" }} 
+        {{ else if eq Dialect "Sqlite" }} 
             , GROUP_CONCAT(authors.name)    {{ ScanStringSlice "Authors" "," }}
         {{ else }}
             {{ fail "invalid dialect" }}
         {{ end }}
-        , books.added_at                    {{ Scan "AddedAt" }}
+        , books.added_at                    {{ ScanTime "AddedAt" }}
     FROM books
     LEFT JOIN book_authors ON books.id = book_authors.book_id
     LEFT JOIN authors ON authors.id = book_authors.author_id
@@ -85,9 +85,9 @@
             FROM book_authors ba
             JOIN authors a ON a.id = ba.author_id
             WHERE
-            {{ if eq Dialect "postgres" }} 
+            {{ if eq Dialect "Postgres" }} 
                 POSITION({{ . }} IN a.name) > 0
-            {{ else if eq Dialect "sqlite" }} 
+            {{ else if eq Dialect "Sqlite" }} 
                 INSTR(a.name, {{ . }}) 
             {{ else }}
                 {{ fail "invalid dialect" }}

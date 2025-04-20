@@ -47,10 +47,10 @@
 
 {{ define "get_book" }}
     SELECT
-        books.id                {{ Scan "ID" }}
-        , books.title           {{ Scan "Title" }}
-        , authors.name          {{ Scan "Author" }}
-        , books.added_at        {{ Scan "AddedAt" }}
+        books.id                {{ ScanInt "ID" }}
+        , books.title           {{ ScanString "Title" }}
+        , authors.name          {{ ScanString "Author" }}
+        , books.added_at        {{ ScanTime "AddedAt" }}
     FROM books
     LEFT JOIN authors ON authors.id = books.author_id
     WHERE books.id = {{ . }};

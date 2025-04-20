@@ -1,8 +1,6 @@
 baseURL: "https://go-sqlt.github.io/"
 title: "{{ sqlt }}"
 
-enableGitInfo: true
-
 menu:
   main:
     - name: Tour
@@ -40,22 +38,13 @@ markup:
     noClasses: false
     tabWidth: 4
 
-outputs:
-  section:
-    - HTML
-    - RSS
-    - print
-
 services:
   googleAnalytics:
     id: G-58SKN6L44R
 
 params:
-  print:
-    disable_toc: true
   icons:
     - "fab fa-golang"
-  github_repo: https://github.com/go-sqlt/go-sqlt.github.io
   github_project_repo: https://github.com/go-sqlt/sqlt
   github_branch: main
 

@@ -4,7 +4,7 @@ go 1.24.1
 
 require (
 	github.com/Masterminds/sprig/v3 v3.3.0
-	github.com/go-sqlt/sqlt v0.3.17
+	github.com/go-sqlt/sqlt v0.3.18
 	github.com/jackc/pgx/v5 v5.7.4
 	github.com/testcontainers/testcontainers-go v0.36.0
 	github.com/testcontainers/testcontainers-go/modules/postgres v0.36.0
@@ -34,6 +34,7 @@ require (
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
+	github.com/google/docsy v0.11.0 // indirect
 	github.com/google/safehtml v0.0.2 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.26.3 // indirect

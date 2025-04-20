@@ -4,7 +4,7 @@ description: >
   This example shows how to create statements for bulk inserts.
 weight: 3
 drivers: [modernc.org/sqlite]
-scanners: [Scan]
+scanners: [ScanInt, ScanString]
 executors: [Exec, First, All]
 configs: [ParseFiles]
 ---

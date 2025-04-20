@@ -4,7 +4,7 @@ description: >
   How to use a custom Scanner.
 weight: 4
 drivers: [modernc.org/sqlite]
-scanners: [Scan, Custom]
+scanners: [ScanInt, ScanString, Custom, ScanTime]
 executors: [Exec, First, One, All]
 configs: [ParseFiles, Lookup, Masterminds/sprig, Funcs]
 ---

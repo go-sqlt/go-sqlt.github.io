@@ -11,8 +11,8 @@
 
 {{ define "get_book" }}
     SELECT
-        id          {{ Scan "ID" }}
-        , title     {{ Scan "Title" }}
+        id          {{ ScanInt "ID" }}
+        , title     {{ ScanString "Title" }}
     FROM books
     WHERE id = {{ . }};
 {{ end }}

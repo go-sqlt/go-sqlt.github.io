@@ -4,7 +4,7 @@ description: >
   This example shows how to build complex queries.
 weight: 5
 drivers: [modernc.org/sqlite]
-scanners: [Scan, ScanStringSlice]
+scanners: [ScanInt, ScanString, ScanStringSlice, ScanTime]
 executors: [Exec, All, One]
 configs: [ParseFiles, Lookup, Masterminds/sprig, Log, NoExpirationCache]
 ---

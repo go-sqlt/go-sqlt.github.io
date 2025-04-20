@@ -4,7 +4,7 @@ description: >
   This example shows how to use statements in transactions.
 weight: 4
 drivers: [modernc.org/sqlite]
-scanners: [Scan]
+scanners: [ScanInt, ScanString, ScanTime]
 executors: [Exec, First, One, All]
 configs: [ParseFiles, Lookup, Masterminds/sprig]
 ---

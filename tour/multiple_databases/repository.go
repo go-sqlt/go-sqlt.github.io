@@ -4,7 +4,6 @@ import (
 	"context"
 	"database/sql"
 	"errors"
-	"text/template"
 	"time"
 
 	"github.com/Masterminds/sprig/v3"
@@ -65,11 +64,7 @@ func NewSqlite() (Repository, error) {
 		return Repository{}, err
 	}
 
-	return NewRepository(db, sqlt.Funcs(template.FuncMap{
-		"Dialect": func() string {
-			return "sqlite"
-		},
-	}))
+	return NewRepository(db, sqlt.Sqlite())
 }
 
 func NewPostgres(conn string) (Repository, error) {
@@ -78,11 +73,7 @@ func NewPostgres(conn string) (Repository, error) {
 		return Repository{}, err
 	}
 
-	return NewRepository(db, sqlt.Dollar, sqlt.Funcs(template.FuncMap{
-		"Dialect": func() string {
-			return "postgres"
-		},
-	}))
+	return NewRepository(db, sqlt.Postgres())
 }
 
 type Repository struct {
