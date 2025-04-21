@@ -24,12 +24,11 @@ var (
 	// Single column queries do not need mapping definition.
 	// Params are always parameterized preventing SQL injection.
 	// Placeholders can be defined with sqlt.Option's (default: Question).
-	insertBook = sqlt.First[string, int64](sqlt.Sqlite(), sqlt.Parse(`
+	insertBook = sqlt.First[string, int64](sqlt.Question{}, sqlt.Parse(`
 		INSERT INTO books (title) VALUES ({{ . }}) RETURNING id;
 	`))
 
 	// Define the mapping with Scan functions.
-	// Scan can be used with any scannable type.
 	// One ensures that only one row is returned by the query (else: sqlt.ErrTooManyRows).
 	getBook = sqlt.One[int64, Book](sqlt.Parse(`
 		SELECT

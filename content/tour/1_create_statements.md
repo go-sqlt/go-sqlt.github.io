@@ -6,7 +6,7 @@ weight: 1
 drivers: [modernc.org/sqlite]
 scanners: [ScanInt, ScanString]
 executors: [First, One]
-configs: [Parse, Sqlite]
+configs: [Parse, Question]
 ---
 
 {{< code language="go" source="tour/create_statements/repository.go" >}}{{< /code >}}

@@ -67,6 +67,9 @@ type Repository struct {
 	DB *sql.DB
 }
 
+// Transactions should not be abstracted away by a SQL framework.
+// This is an example of using them with the Repository pattern.
+// In real-world applications, managing transactions is usually more appropriate in the business/service layer.
 func (r Repository) Create(ctx context.Context, params Params) (id int64, err error) {
 	tx, err := r.DB.BeginTx(ctx, nil)
 	if err != nil {

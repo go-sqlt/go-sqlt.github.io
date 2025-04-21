@@ -1,5 +1,6 @@
 {{ define "schema" }}
     CREATE TABLE IF NOT EXISTS books (
+        {{/* set the dialect function using Sqlite(), Postgres() or Dialect{Name: ".."}. */}}
         {{ if eq Dialect "Postgres" }} 
             id SERIAL PRIMARY KEY
         {{ else if eq Dialect "Sqlite" }} 
