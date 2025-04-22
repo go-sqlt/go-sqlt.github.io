@@ -36,17 +36,14 @@ type Link struct {
 }
 
 var (
-	config = sqlt.Config{
-		Templates: []sqlt.Template{
-			sqlt.Funcs(sprig.TxtFuncMap()),
-			sqlt.ParseFiles("complex_query/queries.go.tpl"),
-		},
-		Log: func(ctx context.Context, info sqlt.Info) {
+	config = sqlt.Funcs(sprig.TxtFuncMap()).With(
+		sqlt.ParseFiles("complex_query/queries.go.tpl"),
+		sqlt.Log(func(ctx context.Context, info sqlt.Info) {
 			if info.Cached {
 				fmt.Println(info.SQL, info.Args)
 			}
-		},
-	}
+		}),
+	)
 
 	schema = sqlt.Exec[any](config, sqlt.Lookup("schema"))
 

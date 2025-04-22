@@ -13,4 +13,4 @@ configs: [ParseFiles, Lookup, Masterminds/sprig]
 
 {{< code language="go" source="tour/transactions/repository.go" >}}{{< /code >}}
 
-<div style="padding-top: 2em; text-align: right"><a href="/tour/5_custom_functions/">>> 5. Custom Functions</a></div>
+<div style="padding-top: 2em; text-align: center"><a href="/tour/5_custom_functions/">>> 5. Custom Functions</a></div>

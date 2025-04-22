@@ -14,4 +14,4 @@ configs: [ParseFiles, Lookup]
 
 {{< code language="go" source="tour/load_from_file/repository.go" >}}{{< /code >}}
 
-<div style="padding-top: 2em; text-align: right"><a href="/tour/3_bulk_insert/">>> 3. Bulk insert</a></div>
+<div style="padding-top: 2em; text-align: center"><a href="/tour/3_bulk_insert/">>> 3. Bulk insert</a></div>

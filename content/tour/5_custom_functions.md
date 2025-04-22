@@ -2,7 +2,7 @@
 title: 5. Custom Functions
 description: >
   How to use a custom Scanner.
-weight: 4
+weight: 5
 drivers: [modernc.org/sqlite]
 scanners: [ScanInt, ScanString, Custom, ScanTime]
 executors: [Exec, First, One, All]
@@ -17,4 +17,4 @@ An alternative to this approach is to implement the sql.Scanner and sql.Valuer i
 
 {{< code language="go" source="tour/custom_functions/repository.go" >}}{{< /code >}}
 
-<div style="padding-top: 2em; text-align: right"><a href="/tour/6_complex_query/">>> 6. Complex Query</a></div>
+<div style="padding-top: 2em; text-align: center"><a href="/tour/6_complex_query/">>> 6. Complex Query</a></div>

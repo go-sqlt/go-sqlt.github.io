@@ -8,12 +8,12 @@ menu:
       weight: 1
     - name: Benchmarks
       pageRef: benchmarks
-      weight: 3
+      weight: 2
     - name: API
-      weight: 4
+      weight: 3
       url: https://pkg.go.dev/github.com/go-sqlt/sqlt
     - name: GitHub
-      weight: 5
+      weight: 4
       url: https://github.com/go-sqlt/sqlt/
 
 taxonomies:
@@ -38,10 +38,6 @@ markup:
     noClasses: false
     tabWidth: 4
 
-services:
-  googleAnalytics:
-    id: G-58SKN6L44R
-
 params:
   icons:
     - "fab fa-golang"
@@ -60,14 +56,6 @@ params:
     sidebar_menu_foldable: true
     sidebar_menu_compact: false
     sidebar_search_disable: false
-    feedback:
-      enable: true
-      "yes": >-
-        Glad to hear it! Please <a href="https://github.com/go-sqlt/go-sqlt.github.io/issues/new">
-        tell us how we can improve</a>.
-      "no": >-
-        Sorry to hear that. Please <a href="https://github.com/go-sqlt/go-sqlt.github.io/issues/new">
-        tell us how we can improve</a>.
 
   links:
     developer:

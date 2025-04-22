@@ -20,11 +20,7 @@ type Params struct {
 }
 
 var (
-	config = sqlt.Config{
-		Templates: []sqlt.Template{
-			sqlt.ParseFiles("bulk_insert/queries.go.tpl"),
-		},
-	}
+	config = sqlt.ParseFiles("bulk_insert/queries.go.tpl")
 
 	schema = sqlt.Exec[any](config, sqlt.Lookup("schema"))
 

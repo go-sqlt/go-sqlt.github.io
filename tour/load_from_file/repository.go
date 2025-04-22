@@ -14,11 +14,7 @@ type Book struct {
 }
 
 var (
-	config = sqlt.Config{
-		Templates: []sqlt.Template{
-			sqlt.ParseFiles("load_from_file/queries.go.tpl"),
-		},
-	}
+	config = sqlt.ParseFiles("load_from_file/queries.go.tpl")
 
 	// sqlt.Config and Lookup implement the sqlt.Option interface.
 	schema = sqlt.Exec[any](config, sqlt.Lookup("schema"))

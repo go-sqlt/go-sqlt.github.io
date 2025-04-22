@@ -18,19 +18,21 @@ var (
 		CREATE TABLE IF NOT EXISTS books (
 			id INTEGER PRIMARY KEY,
 			title TEXT NOT NULL
-		)
+		);
 	`
+
+	// Question is the default placeholder.
+	config = sqlt.Question()
 
 	// Single column queries do not need mapping definition.
 	// Params are always parameterized preventing SQL injection.
-	// Placeholders can be defined with sqlt.Option's (default: Question).
-	insertBook = sqlt.First[string, int64](sqlt.Question{}, sqlt.Parse(`
+	insertBook = sqlt.First[string, int64](config, sqlt.Parse(`
 		INSERT INTO books (title) VALUES ({{ . }}) RETURNING id;
 	`))
 
 	// Define the mapping with Scan functions.
 	// One ensures that only one row is returned by the query (else: sqlt.ErrTooManyRows).
-	getBook = sqlt.One[int64, Book](sqlt.Parse(`
+	getBook = sqlt.One[int64, Book](config, sqlt.Parse(`
 		SELECT
 			id              {{ ScanInt "ID" }}
 			, title         {{ ScanString "Title" }}

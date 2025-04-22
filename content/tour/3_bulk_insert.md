@@ -14,4 +14,4 @@ configs: [ParseFiles]
 
 {{< code language="go" source="tour/bulk_insert/repository.go" >}}{{< /code >}}
 
-<div style="padding-top: 2em; text-align: right"><a href="/tour/4_transactions/">>> 4. Transactions</a></div>
+<div style="padding-top: 2em; text-align: center"><a href="/tour/4_transactions/">>> 4. Transactions</a></div>

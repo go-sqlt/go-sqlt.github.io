@@ -35,11 +35,11 @@ type Link struct {
 	AuthorIDs []int64
 }
 
-func NewRepository(db *sql.DB, opts ...sqlt.Option) (Repository, error) {
-	config := sqlt.Configure(append(opts,
+func NewRepository(db *sql.DB, config sqlt.Config) (Repository, error) {
+	config = config.With(
 		sqlt.Funcs(sprig.TxtFuncMap()),
 		sqlt.ParseFiles("multiple_databases/queries.go.tpl"),
-	)...)
+	)
 
 	schema := sqlt.Exec[any](config, sqlt.Lookup("schema"))
 

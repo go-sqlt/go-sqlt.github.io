@@ -11,6 +11,7 @@ import (
 	custom_functions "docs/tour/custom_functions"
 	load_from_file "docs/tour/load_from_file"
 	multiple_databases "docs/tour/multiple_databases"
+	template_functions "docs/tour/template_functions"
 	transactions "docs/tour/transactions"
 
 	"github.com/testcontainers/testcontainers-go"
@@ -27,6 +28,8 @@ func main() {
 	complex_query_example()
 	multiple_db_sqlite_example()
 	multiple_db_postgres_example()
+
+	fmt.Println(template_functions.Query.Exec(context.Background(), nil, nil))
 }
 
 func multiple_db_sqlite_example() {

@@ -42,46 +42,43 @@ type Insert struct {
 }
 
 var (
-	config = sqlt.Config{
-		Templates: []sqlt.Template{
-			sqlt.Funcs(sprig.TxtFuncMap()),
-			sqlt.Funcs(template.FuncMap{
-				"ValueGenre": func(g Genre) (string, error) {
-					switch g {
-					case Adventure:
-						return "Adventure", nil
-					case Tragedy:
-						return "Tragedy", nil
-					case Allegorical:
-						return "Allegorical", nil
-					default:
-						return "", fmt.Errorf("unknown genre: %d", g)
-					}
-				},
-				"ScanGenre": func() sqlt.Scanner[Book] {
-					return func() (any, func(dest *Book) error) {
-						var txt string
+	config = sqlt.Funcs(sprig.TxtFuncMap()).With(
+		sqlt.Funcs(template.FuncMap{
+			"ValueGenre": func(g Genre) (string, error) {
+				switch g {
+				case Adventure:
+					return "Adventure", nil
+				case Tragedy:
+					return "Tragedy", nil
+				case Allegorical:
+					return "Allegorical", nil
+				default:
+					return "", fmt.Errorf("unknown genre: %d", g)
+				}
+			},
+			"ScanGenre": func() sqlt.Scanner[Book] {
+				return func() (any, func(dest *Book) error) {
+					var txt string
 
-						return &txt, func(dest *Book) error {
-							switch txt {
-							case "Adventure":
-								dest.Genre = Adventure
-							case "Tragedy":
-								dest.Genre = Tragedy
-							case "Allegorical":
-								dest.Genre = Allegorical
-							default:
-								return fmt.Errorf("unknown genre: %s", txt)
-							}
-
-							return nil
+					return &txt, func(dest *Book) error {
+						switch txt {
+						case "Adventure":
+							dest.Genre = Adventure
+						case "Tragedy":
+							dest.Genre = Tragedy
+						case "Allegorical":
+							dest.Genre = Allegorical
+						default:
+							return fmt.Errorf("unknown genre: %s", txt)
 						}
+
+						return nil
 					}
-				},
-			}),
-			sqlt.ParseFiles("custom_functions/queries.go.tpl"),
-		},
-	}
+				}
+			},
+		}),
+		sqlt.ParseFiles("custom_functions/queries.go.tpl"),
+	)
 
 	schema = sqlt.Exec[any](config, sqlt.Lookup("schema"))
 
