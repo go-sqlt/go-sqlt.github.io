@@ -1,26 +1,11 @@
 baseURL: "https://go-sqlt.github.io/"
-title: "{{ sqlt }}"
+title: "{{ go-sqlt }}"
 
-menu:
-  main:
-    - name: Tour
-      pageRef: tour
-      weight: 1
-    - name: Benchmarks
-      pageRef: benchmarks
-      weight: 2
-    - name: API
-      weight: 3
-      url: https://pkg.go.dev/github.com/go-sqlt/sqlt
-    - name: GitHub
-      weight: 4
-      url: https://github.com/go-sqlt/sqlt/
-
-taxonomies:
-  driver: drivers
-  scanner: scanners
-  executor: executors
-  config: configs
+# taxonomies:
+#   driver: drivers
+#   scanner: scanners
+#   executor: executors
+#   config: configs
 
 imaging:
   resampleFilter: CatmullRom
@@ -49,7 +34,7 @@ params:
 
   ui:
     showLightDarkModeMenu: true
-    breadcrumb_disable: false
+    breadcrumb_disable: true
     navbar_logo: false
     navbar_translucent_over_cover_disable: false
     sidebar_cache_limit: 10
@@ -57,16 +42,16 @@ params:
     sidebar_menu_compact: false
     sidebar_search_disable: false
 
-  links:
-    developer:
-      - name: github
-        url: https://github.com/go-sqlt/sqlt
-        icon: fab fa-github
-        desc: github
-      - name: go-doc
-        url: https://pkg.go.dev/github.com/go-sqlt/sqlt
-        icon: fab fa-golang
-        desc: go-doc
+  # links:
+  #   developer:
+  #     - name: github
+  #       url: https://github.com/go-sqlt/sqlt
+  #       icon: fab fa-github
+  #       desc: github
+  #     - name: go-doc
+  #       url: https://pkg.go.dev/github.com/go-sqlt/sqlt
+  #       icon: fab fa-golang
+  #       desc: go-doc
 
 module:
   hugoVersion:

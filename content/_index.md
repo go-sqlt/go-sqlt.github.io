@@ -3,33 +3,62 @@ title: sqlt
 exclude_search: true
 ---
 
-{{< blocks/cover title="{{ sqlt }}" image_anchor="top" height="full" >}}
-<p class="lead mt-0 mb-4">A Go Template-Based SQL Builder and Struct Mapper</p>
-<a class="btn btn-lg btn-primary me-3 mb-4" href="tour/">
-  Start Tour <i class="fas fa-camera ms-2"></i>
-</a>
-<p class="lead mt-0">SQL-First</p>
-<p class="lead mt-0">No Build-Step</p>
-<p class="lead mt-0 mb-4">Type-Safe</p>
-{{< blocks/link-down color="info" >}}
+{{< blocks/cover title="go-sqlt" image_anchor="top" height="full" >}}
+
+<div style="text-align: left; width: auto; display: inline-block;">
+<div style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+  <a class="btn btn-md btn-primary" href="sqlt/" style="width: 110px; margin-right: 1rem;">sqlt</a>
+  <span>A Go Template-Based SQL Builder and Struct Mapper.</span>
+</div>
+
+<div style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+  <a class="btn btn-md btn-primary" href="structscan/" style="width: 110px; margin-right: 1rem;">structscan</a>
+  <span>Go SQL Struct Mapping Utilities.</span>
+</div>
+
+<div style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+  <a class="btn btn-md btn-primary" href="datahash/" style="width: 110px; margin-right: 1rem;">datahash</a>
+  <span>Hashing Utility for arbitrary Go Values.</span>
+</div>
+</div>
+
+{{< blocks/link-down >}}
 {{< /blocks/cover >}}
 
-
-{{% blocks/lead %}}
+{{% blocks/lead color="primary" %}}
 Links
 {{% /blocks/lead %}}
 
+{{% blocks/section color="info" type="row" %}}
 
-{{% blocks/section type="row" %}}
-
-{{% blocks/feature icon="fab fa-github" title="github"
+{{% blocks/feature icon="fab fa-github" title="sqlt"
     url="https://github.com/go-sqlt/sqlt" %}}
 Github
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fab fa-golang" title="go-doc"
+{{% blocks/feature icon="fab fa-github" title="structscan"
+    url="https://github.com/go-sqlt/structscan" %}}
+Github
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fab fa-github" title="datahash"
+    url="https://github.com/go-sqlt/datahash" %}}
+Github
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fab fa-golang" title="sqlt"
     url="https://pkg.go.dev/github.com/go-sqlt/sqlt" %}}
-Go Doc
+GoDoc
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fab fa-golang" title="structscan"
+    url="https://pkg.go.dev/github.com/go-sqlt/structscan" %}}
+GoDoc
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fab fa-golang" title="datahash"
+    url="https://pkg.go.dev/github.com/go-sqlt/datahash" %}}
+GoDoc
 {{% /blocks/feature %}}
 
 {{% /blocks/section %}}
